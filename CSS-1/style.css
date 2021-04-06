@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #ddffbc;
+  }
+  .title {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 10px;
+    overflow: hidden;
+  }
+  
+  img {
+    height: 150px;
+    grid-column: 1 / 2;
+  }
+  header {
+    background-color: #feffde;
+    padding: 10px;
+    margin: 0px;
+  }
+  h1 {
+    grid-column: 2 / 3;
+  }
+  
+  h1, h2, p, li {
+    color: gray;
+    font-family: Helvetica;
+  }
+  
+  main {
+    margin: 10px;
+  }
+  
+  p.citation, a.external-link {
+    color: SeaGreen;
+  }
+  
+  .description {
+    font-size: 20px;
+  }
+  
+  .ingredients {
+    list-style: square;
+  }
+  
+  #cook-time {
+    font-weight: bold;
+  }
+  
+  footer{
+    padding: 10px;
+    background-color: #feffde;
+    text-align: center;
+  }
+  
