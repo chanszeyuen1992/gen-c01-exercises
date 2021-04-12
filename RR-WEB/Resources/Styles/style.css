@@ -6,6 +6,25 @@ body {
 
 }
 
+h1,
+h2,
+h3,
+p{
+    color: #4a4a4a;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 1.8rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
 /* Navbar section*/
 header {
     display: flex;
@@ -27,7 +46,13 @@ header #logo img {
 }
 
 header #logo p {
-    font-size: 1rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+header #logo span {
+    color: #9f9f9f;
+    font-weight: bolder;
 }
 
 header nav {
@@ -40,11 +65,39 @@ nav img {
     display: none;
 }
 
+@media screen and (max-width: 900px) {
+    header {
+        display: flex;
+        justify-content: center;
+    }
+
+    header nav{
+        display: flex;
+        width:100%
+    }
+
+    #logo img{
+        display: none;
+    }
+
+    #logo p{
+        display: none;
+    }
+    
+    header nav p{
+        display: none;
+    }
+
+    header nav img{
+        display: block;
+    }
+}
+
 /*Banner Section*/
 
 #banner {
     display: flex;
-    background-color: grey;
+    background-color:#d8d8d8;
     padding: 32px 24px;
 }
 
@@ -54,17 +107,18 @@ nav img {
 }
 
 #banner .content {
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: 24px;
     padding-right: 70px;
-    gap: 20px;px;
+    gap: 20px;
 }
 
 #banner .content h1 {
     margin-bottom: 0px;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 #banner .content p{
@@ -73,21 +127,55 @@ nav img {
 }
 
 #banner .content .button {
-    background-color: black;
+    background-color: #4a4a4a;
     color: white;
     font-size: 8px;
     padding:8px 0;
     text-align: center;
 }
 
+@media screen and (max-width: 900px){
+    #banner{
+        flex-direction: column;
+        padding: 0;
+        justify-content: center;
+    }
+
+    #banner img {
+        width: 100%;
+        height: auto;
+    }
+
+    #banner .content{
+        display: block;
+        padding:0;
+        margin: 32px 16px;
+    }
+
+
+    #banner .content h1{
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    #banner .content p{
+        margin-top: 32px;
+        margin-bottom: 24px;
+    }
+   
+}
+
 /*Information Section*/
 #info {
     display: flex;
     justify-content: space-between;
+    height: fit-content;
 
 }
 
 #info .main {
+    display: flex;
+    flex-direction: column;
     width: 60%;
     margin: 32px 24px;
 }
@@ -148,6 +236,50 @@ nav img {
 
 #info .content .box .info-text a {
     font-size: 1rem;
+    color:#4a90e2;
+}
+
+@media screen and (max-width: 900px){
+    #info {
+        margin: 16px;
+    }
+
+    #info .main{
+        width:0;
+        display: none;
+        margin: 0;
+    }
+
+    #info .content{
+        width: 100%;
+    }
+
+    #info .content .box{
+        width 100%;
+        display: flex;
+        flex-direction: column;
+        border: 0px
+        padding: 0;
+        margin: 0;
+    }
+
+    #info .content .wide-img{
+        margin:0;
+        display: none;
+        width:0;
+    }
+    #info .content .info-text{
+        padding: 0;
+        margin-left: 16px;
+        margin-bottom: 64px;
+    }
+    
+    
+
+    #info .content .narrow-img{
+        display: block;
+        width:100%;
+    }
 }
 
 /*Course Section*/
@@ -155,7 +287,7 @@ nav img {
 #course {
     padding: 32px 72px;
     display: block;
-    background-color: honeydew;
+    background-color: #eaebec;
 }
 
 #course h1{
@@ -190,7 +322,47 @@ nav img {
     margin:0;
 }
 #course .container .box .text p{
+    color:#767676;
     margin: 0px;
+}
+
+@media screen and (max-width: 900px){
+    #course{
+        margin: 32px 0;
+        background-color: #fdfdfd;
+        border-top: #9f9f9f 1px solid;
+        border-bottom: #9f9f9f 1px solid;
+    }
+    #course .container {
+        gap:8px;
+    }
+    #course .container .box{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding:0;
+    }
+    #course .container .box .text{
+        margin: 0px;
+    }
+
+    #course .container .box .text h3{
+        margin: 0;
+        padding: 16px 24px;
+        background-color: #d8d8d8;
+    }
+
+
+    #course .container .box img{
+        display:none;
+        width:0;
+    }
+    #course .container .box .text p {
+        display:none;
+        width:0;
+        height: 0px;
+    }
 }
 
 /*exhibit Section*/
@@ -229,7 +401,85 @@ nav img {
     width: 40%
 }
 
-#exhibit .box {
+#exhibit .boxes .box {
     display: flex;
+    padding: 16px;
+}
 
+#exhibit .boxes .box img {
+    width: 35%;
+}
+
+#exhibit .boxes .box .text {
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#exhibit .boxes .box .text h3 {
+
+}
+
+#exhibit .boxes .box .text p{
+
+}
+
+@media screen and (max-width: 900px){
+    #exhibit{
+        margin:0;
+        display: block;
+    }
+
+    #exhibit .container{
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #exhibit .container .video{
+        margin: 0;
+    }
+
+    #exhibit .container .video video{
+        width: 100%;
+    }
+
+    #exhibit .container .video h2{
+        display: none;
+    }
+
+    #exhibit .container .video p{
+        display: none;
+    }
+
+    #exhibit .boxes{
+        display: none;
+        width: 0;
+        margin: 0;
+    }
+    #exhibit .boxes .box{
+        display: none;
+        width: 0;
+        margin: 0;
+    }
+}
+
+/* footer Section*/
+footer{
+    border-top: 2px solid #a9aaad;
+    padding: 16px 24px 40px 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+@media screen and (max-width: 900px){
+    footer .container{
+        display: none;
+    }
 }
