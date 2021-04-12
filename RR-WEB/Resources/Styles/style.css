@@ -3,7 +3,7 @@ html {
 }
 
 body {
-
+    margin: 0;
 }
 
 h1,
@@ -426,22 +426,23 @@ nav img {
 }
 
 @media screen and (max-width: 900px){
-    #exhibit{
-        margin:0;
+   
+    #exhibit {
+        margin: 32px 0 24px 0;
+
+    }
+    #exhibit .container{
         display: block;
     }
 
-    #exhibit .container{
-        justify-content: center;
-        flex-direction: column;
-    }
-
     #exhibit .container .video{
+        width:100%;
         margin: 0;
     }
 
     #exhibit .container .video video{
         width: 100%;
+        margin-bottom: 0;
     }
 
     #exhibit .container .video h2{
@@ -452,15 +453,11 @@ nav img {
         display: none;
     }
 
-    #exhibit .boxes{
+    #exhibit .container .boxes{
         display: none;
         width: 0;
         margin: 0;
-    }
-    #exhibit .boxes .box{
-        display: none;
-        width: 0;
-        margin: 0;
+        padding: 0;
     }
 }
 
