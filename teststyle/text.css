@@ -1,0 +1,19 @@
+header {
+    background-color: aquamarine;
+}
+
+main {
+    background-color: azure;
+}
+
+footer {
+    background-color: blue;
+}
+
+div {
+    margin: 10px 0;
+}
+
+.btn-primary {
+    background-color: antiquewhite;
+}
