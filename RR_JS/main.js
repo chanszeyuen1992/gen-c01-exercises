@@ -135,6 +135,6 @@ class Field {
 
 }
 
-const myField = new Field(Field.generateField(10, 10, 7));
+const myField = new Field(Field.generateField(10, 10, 70));
 
 myField.playGame()
